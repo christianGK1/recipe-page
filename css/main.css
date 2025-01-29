@@ -1,0 +1,181 @@
+:root {
+  /* COLORS */
+  --white: #fff;
+  --rose-50: #fff7fb;
+  --rose-800: #7a284e;
+  --stone-900: #312e2c;
+  --stone-600: #5f564d;
+  --stone-150: #e3ddd7;
+  --stone-100: #f3e5d7;
+  --brown-800: #854632;
+
+  /* TYPOGRAPHY */
+  --font-family-young: 'Young Serif', sans-serif;
+  --font-family-outfit: 'Outfit', sans-serif;
+  --text-preset-1: 400 4rem / 100% var(--font-family-young);
+  --text-preset-2: 400 2.8rem / 100% var(--font-family-young);
+  --text-preset-3: 600 2rem / 100% var(--font-family-outfit);
+  --text-preset-4: 400 1.6rem / 150% var(--font-family-outfit);
+  --text-preset-4-bold: 700 1.6rem / 150% var(--font-family-outfit);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 100vh;
+  font-family: var(--font-family-outfit);
+  font-size: 1.6rem;
+  color: var(--stone-600);
+  background-color: var(--stone-100);
+}
+
+h1 {
+  margin-block-start: 4rem;
+  font: var(--text-preset-1);
+  color: var(--stone-900);
+}
+
+h2 {
+  margin-block-end: 2.4rem;
+  font: var(--text-preset-2);
+  color: var(--brown-800);
+}
+
+h3 {
+  margin-block-end: 1.6rem;
+  font: var(--text-preset-3);
+  color: var(--rose-800);
+}
+
+ul,
+ol {
+  padding-inline-start: 2rem;
+}
+
+li {
+  padding-inline-start: 1.8rem;
+}
+
+li:not(:last-child),
+ol:not(:last-child) {
+  margin-block-end: 1rem;
+}
+
+li::marker {
+  font-size: 1rem;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  padding: 4rem 4rem 0;
+  border-radius: 1.2rem;
+  vertical-align: middle;
+}
+
+hr {
+  margin-block: 3.2rem;
+  color: var(--stone-150);
+}
+
+table {
+  inline-size: 100%;
+  margin-block-start: 2.4rem;
+  border-collapse: collapse;
+}
+
+tr:not(:last-child) {
+  border-bottom: 0.1rem solid var(--stone-150);
+}
+
+th {
+  padding-inline-start: 3.2rem;
+  font-weight: 400;
+  text-align: start;
+}
+
+th:not(:last-child) {
+  padding-block: 1.2rem;
+}
+
+td {
+  inline-size: 48%;
+  font: var(--text-preset-4-bold);
+  color: var(--brown-800);
+}
+
+.card {
+  max-inline-size: 73.6rem;
+  margin-block: 12.8rem;
+  border-radius: 2.4rem;
+  background-color: var(--white);
+}
+
+.card__content {
+  padding: 0 4rem 4rem;
+}
+
+.card__recipe-description {
+  margin-block: 2.4rem 3.2rem;
+}
+
+.card__preparation {
+  margin-block-end: 3.2rem;
+  padding: 2.4rem;
+  border-radius: 1.2rem;
+  background-color: var(--rose-50);
+}
+
+.card__preparation ul li::marker {
+  color: var(--rose-800);
+}
+
+.card__ingredients ul li::marker {
+  color: var(--brown-800);
+}
+
+.card__instructions ol li::marker {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--brown-800);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    max-inline-size: 61.6rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  .card {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .card__content {
+    padding-inline: 3.2rem;
+    padding-block: 0 4rem;
+  }
+
+  img {
+    padding: 0;
+    border-radius: 0;
+  }
+}
